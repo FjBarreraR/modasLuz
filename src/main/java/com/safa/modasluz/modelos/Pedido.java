@@ -26,7 +26,7 @@ public class Pedido {
     private Cliente cliente;
 
     @Column(name = "precio")
-    private Integer precio;
+    private Double precio;
 
     @Column(name = "fecha")
     private Timestamp fecha;

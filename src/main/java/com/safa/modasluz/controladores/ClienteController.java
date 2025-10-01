@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+// Ruta: http://localhost:8080/
+
 @RestController
 @RequestMapping("/cliente")
 @AllArgsConstructor
@@ -35,7 +37,7 @@ public class ClienteController {
         clienteService.editarCliente(id, dto);
     }
 
-    @DeleteMapping("/delete")
+    @DeleteMapping("/delete/{id}")
     public void deleteCliente(@PathVariable Integer id) {
         clienteService.eliminarCliente(id);
     }
