@@ -39,17 +39,26 @@ public class ClienteService {
 
     public void crearCliente(ClientePostDTO dto){
      Cliente clienteNuevo = new Cliente();
+
      clienteNuevo.setNombre(dto.getNombre());
+     clienteNuevo.setCorreoElectronico(dto.getCorreoElectronico());
+     clienteNuevo.setContrasenya( dto.getContrasenya());
+
+     repository.save(clienteNuevo);
     }
 
     public void editarCliente(Integer id, ClientePostDTO dto){
         Cliente clienteNuevo = repository.findById(id).orElse(null);
         if (clienteNuevo != null){
             clienteNuevo.setNombre(dto.getNombre());
+            clienteNuevo.setCorreoElectronico(dto.getCorreoElectronico());
+            clienteNuevo.setContrasenya( dto.getContrasenya());
+
+            repository.save(clienteNuevo);
         }
     }
 
     public void eliminarCliente(Integer id){
-
+        repository.deleteById(id);
     }
 }
