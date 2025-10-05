@@ -36,7 +36,7 @@ public class PedidoController {
         pedidoService.editarPedido(id, dto);
     }
 
-    @DeleteMapping("/delete")
+    @DeleteMapping("/delete/{id}")
     public void deletePedido(@PathVariable Integer id) {
         pedidoService.eliminarPedido(id);
     }

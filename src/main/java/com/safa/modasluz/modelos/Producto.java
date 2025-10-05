@@ -31,5 +31,5 @@ public class Producto {
     private Color color;
 
     @Column(name = "precio")
-    private Integer precio;
+    private Double precio;
 }

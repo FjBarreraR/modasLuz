@@ -38,7 +38,7 @@ public class InventarioController {
         inventarioServive.editarInventario(id, dto);
     }
 
-    @DeleteMapping("/delete")
+    @DeleteMapping("/delete/{id}")
     public void deleteInventario(@PathVariable Integer id) {
         inventarioServive.eliminarInventario(id);
     }

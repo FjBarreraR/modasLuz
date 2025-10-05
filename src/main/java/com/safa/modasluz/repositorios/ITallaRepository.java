@@ -1,11 +1,11 @@
 package com.safa.modasluz.repositorios;
 
-import com.safa.modasluz.modelos.Inventario;
+import com.safa.modasluz.modelos.Talla;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
 
-public interface ITallaRepository extends JpaRepository<Inventario, Integer> {
+public interface ITallaRepository extends JpaRepository<Talla, Integer> {
 
 }
